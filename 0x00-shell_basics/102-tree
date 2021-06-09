@@ -1,2 +1,2 @@
 #!/bin/bash
-tree -d welcome/to/holberton
+tree -p welcome/to/holberton
