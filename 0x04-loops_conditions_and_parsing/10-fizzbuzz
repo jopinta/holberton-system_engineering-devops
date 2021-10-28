@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Chinese culture while loop 4th 8th loop iteration
+
+i=1; while [[ $i -lt 101 ]]
+	   do
+	 if ! (( $i%15 )); then
+        echo FizzBuzz
+    elif ! (( $i%3 )); then
+	echo "Fizz"
+	elif ! (( $i%5 )); then
+	     echo "Buzz";
+	 else
+	     echo $i
+fi
+	     i=$((i+1));
+	 done
