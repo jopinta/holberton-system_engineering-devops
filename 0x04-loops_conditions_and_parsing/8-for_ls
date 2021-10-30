@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# for ls displays content o the cd
+
+for i in *; do echo $i; done
