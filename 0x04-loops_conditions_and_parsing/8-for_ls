@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # for ls displays content o the cd
 
-for i in *; do echo $i; done
+for i in *; do echo "$i" | cut -d '-' -f 2; done
