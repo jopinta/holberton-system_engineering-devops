@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#netstat - print network connections
+
+netstat -lp
+
+
