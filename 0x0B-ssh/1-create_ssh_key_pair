@@ -4,9 +4,7 @@
 # SIZE=${2:-4096}
 # DEST=${3:-/usr/bin/env}
 
-ssh-keygen -b 4096
--f school
--P betty
+ssh-keygen -b 4096 -f school -P betty
 # To change or remove the passphrase, simply type:
 
 # -p      Requests changing the passphrase of a private key file
