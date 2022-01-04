@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Bash script that creates an RSA key pair.
+# NAME=${1:-school}
+# SIZE=${2:-4096}
+# DEST=${3:-/usr/bin/env}
+
+ssh-keygen -b 4096
+-f school
+-P betty
+# To change or remove the passphrase, simply type:
+
+# -p      Requests changing the passphrase of a private key file
+           #  instead of creating a new private key.  The program will
+            # prompt for the file containing the private key, for the old
+             # passphrase, and twice for the new passphrase.
