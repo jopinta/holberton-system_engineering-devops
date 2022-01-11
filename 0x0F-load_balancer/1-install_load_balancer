@@ -9,10 +9,9 @@ frontend http_front
     bind *: 80
     stats uri /haproxy?stats
     default_backend http_back
-
 backend http_back
     balance roundrobin
-    server 2787-web-01 35.231.108.125 check
-    server 2787-web-02 34.75.97.188 check
+    server 2787-web-01 35.231.108.125:80 check
+    server 2787-web-02 34.75.97.188:80 check
 " >> /etc/haproxy/haproxy.cfg
-service haproxy restart
+service haproxy start
