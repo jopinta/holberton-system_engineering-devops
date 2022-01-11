@@ -6,7 +6,7 @@ sudo apt-get install -y haproxy=2.5.\*
 
 printf %s "
 frontend http_front
-    bind *: 80
+    bind *:80
     stats uri /haproxy?stats
     default_backend http_back
 backend http_back
