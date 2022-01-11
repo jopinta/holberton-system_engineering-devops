@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# HAproxy configuration
+
+sudo apt upgrade -y
+sudo apt-get install -y haproxy=2.5.\*
+
+printf %S "
+frontend LOADBALANCER-01
+bind *: 80
+mode hhtp
+default_backend WEBSERVERS-01
+
+backend WEBSERVERS-01
+balance roundrobin
+server 2787-web-01 35.231.108.125 check
+server 2787-web-02  34.75.97.188 check
+" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
