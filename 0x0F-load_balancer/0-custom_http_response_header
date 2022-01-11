@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 # add header to the server
 
-sudo su
-apt-get update -y
-apt-get -y install nginx
-ufw allow "Nginx HHTP"
-echo "Hello World!" > /var/www/html/index.html
-sudo sed -i '/server_name _;/a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
-sed -i '/# First attempt to serve request as file, then/a add_header X-Served-By $hostname;\n' /etc/nginx/sites-available/default
+#sudo su
+#apt-get update -y
+#apt-get -y install nginx
+#ufw allow "Nginx HHTP"
+#echo "Hello World!" > /var/www/html/index.html
+#sudo sed -i '/server_name _;/a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+#sed -i '/# First attempt to serve request as file, then/a add_header X-Served-By $hostname;\n' /etc/nginx/sites-available/default
 #sed -i "/location/a \ add_header X-Served-By $HOSTNAME;\n" /etc/nginx/sites-available/default
-service nginx restart
+#service nginx restart
+
+printf %s "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    add_header X-Served-By $HOSTNAME;
+}" > /etc/nginx/sites-available/default
+
+sudo service nginx restart
