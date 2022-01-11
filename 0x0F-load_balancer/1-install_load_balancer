@@ -4,10 +4,10 @@
 sudo apt upgrade -y
 sudo apt-get install -y haproxy=2.5.\*
 
-printf %S "
+printf %s "
 frontend http_front
 bind *: 80
-stats ur5i /haproxy?stats
+stats uri /haproxy?stats
 default_backend http_back
 
 backend http_back
