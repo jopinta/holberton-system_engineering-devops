@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#
+
+sudo su
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+systemctl nginx restart
