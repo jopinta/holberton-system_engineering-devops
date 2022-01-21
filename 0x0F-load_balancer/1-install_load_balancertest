@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # HAproxy configuration
-
+sudo su
 apt upgrade -y
 apt-get install -y haproxy=2.5.\*
 
