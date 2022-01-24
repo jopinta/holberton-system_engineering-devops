@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 #uncomplicated firewall
-
-sudo su
-apt-get update
-apt-get install ufw -y
-ufw enable
-ufw allow 22/tcp
-ufw allow 443/tcp
-ufw allow 80/tcp
+sudo apt-get update
+sudo apt-get install ufw -y
+sudo ufw enable
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
