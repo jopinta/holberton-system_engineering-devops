@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # HAproxy configuration
-
+sudo su
 apt upgrade -y
-apt-get install -y haproxy=2.5.\*
+apt-get install -y haproxy=1.6.\*
 
 printf %s "
 frontend http_front
@@ -11,6 +11,7 @@ frontend http_front
     default_backend http_back
 backend http_back
     balance roundrobin
+    mode http
     server 2787-web-01 35.231.108.125:80 check
     server 2787-web-02 34.139.64.252:80 check
 " >> /etc/haproxy/haproxy.cfg
