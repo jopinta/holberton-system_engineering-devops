@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#uncomplicated firewall
+
+sudo su
+apt-get update
+apt-get install ufw -y
+ufw enable
+ufw allow 22/TCP
+ufw allow 443/TCP
+ufw allow 80/TCP
