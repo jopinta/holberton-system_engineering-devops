@@ -5,6 +5,6 @@ sudo su
 apt-get update
 apt-get install ufw -y
 ufw enable
-ufw allow 22/TCP
-ufw allow 443/TCP
-ufw allow 80/TCP
+ufw allow 22/tcp
+ufw allow 443/tcp
+ufw allow 80/tcp
