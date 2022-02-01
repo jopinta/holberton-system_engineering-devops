@@ -2,8 +2,9 @@
 '''use rest api'''
 
 
-import requests
 from sys import argv
+import requests
+
 
 if __name__ == "__main__":
     ID = int(argv[1])
@@ -27,4 +28,4 @@ if __name__ == "__main__":
 
     print('Emplyee {} is done with tasks({}/{}):'.format(name,todo, total))
     for task in tasks:
-        print('\t {}'.format(task)
+        print('\t {}'.format(task))
