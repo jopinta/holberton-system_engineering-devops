@@ -7,13 +7,19 @@ import requests
 
 
 if __name__ == "__main__":
-    ID = int(argv[1])
-    response = requests.get(
-        'https://jsonplaceholder.typicode.com/todos).json()
-    user_list = requests.get('https://jsonplaceholder.typicode.com/users').json()
+    urlTodos = 'https://jsonplaceholder.typicode.com/todos'
+    urlUsers = 'https://jsonplaceholder.typicode.com/users'
+
+    r1 = requests.get(urlTodos)
+    r2 = requests.get(urlUsers)
+
+    t_json = r1.json()
+    u_json = r2.json()
+
     count = 0
     todos = []
     total = 0
+    name = response[int(argv[1]) -1]['name']
 
     for user in user_list:
         if user.get('id') == id:
