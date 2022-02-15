@@ -25,10 +25,10 @@ if __name__ == "__main__":
     for user in t_json:
         if user['userId'] == user_id:
             if user['completed']:
-                count += 1
+                count = count + 1
                 todos.append(user['title'])
-            total += 1
+            total = total + 1
 
-    print('Emplyee {} is done with tasks({}/{}):'.format(name, todos, total))
+    print('Employee {} is done with tasks({}/{}):'.format(name, count, total))
     for todo in todos:
         print('\t {}'.format(todo))
