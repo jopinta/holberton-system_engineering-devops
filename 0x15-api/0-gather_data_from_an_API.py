@@ -19,7 +19,7 @@ if __name__ == "__main__":
     count = 0
     todos = []
     total = 0
-    name = response[int(argv[1]) -1]['name']
+    name = response[int(argv[1]) - 1]['name']
 
     for user in user_list:
         if user.get('id') == id:
