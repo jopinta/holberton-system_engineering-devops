@@ -24,11 +24,11 @@ if __name__ == "__main__":
 
     for user in t_json:
         if user['userId'] == user_id:
-            if user['completed']:
+            if user['completed'] is True:
                 count = count + 1
                 todos.append(user['title'])
             total = total + 1
 
     print('Employee {} is done with tasks({}/{}):'.format(name, count, total))
-    for todo in todos:
-        print('\t {}'.format(todo))
+    for TASK_FILE in todos:
+        print('\t {}'.format(TASK_FILE))
