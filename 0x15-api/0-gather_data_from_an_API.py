@@ -19,20 +19,16 @@ if __name__ == "__main__":
     count = 0
     todos = []
     total = 0
-    name = response[int(argv[1]) - 1]['name']
+    name = u_json[int(argv[1]) - 1]['name']
+    user_id = int(argv[1])
 
-    for user in user_list:
-        if user.get('id') == id:
-            name = user.get('name')
-            break
-
-    for todo in response:
-        if todo.get('userId') == id:
-            if todo.get('completed'):
-                todo.append(todo.get('title'))
+    for user in t_json:
+        if user['userId'] == user_id:
+            if user['completed']:
                 count += 1
+                todos.append(user['title'])
             total += 1
 
-    print('Emplyee {} is done with tasks({}/{}):'.format(name, todo, total))
+    print('Emplyee {} is done with tasks({}/{}):'.format(name, todos, total))
     for todo in todos:
         print('\t {}'.format(todo))
