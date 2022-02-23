@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 ''' como formmat'''
 
-if __name__ == "__main":
-    import csv
-    import requests
-    import sys
 
+import csv
+import requests
+import sys
+if __name__ == "__main":
+    
     user_id = argv[1]
     r1 = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
                      format(user_id).json()
