@@ -1,5 +1,5 @@
 # Change the OS config
-exec {
+exec { 'holberton':
 command => sed -i 's/holberton soft nofile 4/holberton soft nofile/g' etc/security/limits.conf sed -i
 provider => shell,
 }
